@@ -1,7 +1,10 @@
 import "../styles/User.css"
 
-const UserHeader = () => {
-
+/**
+ * Display user header
+ * @component
+ */
+export default function UserHeader () {
     return (
         <div className="user-header">
             <h1>Welcome back<br />Tony Jarvis!</h1>
@@ -10,4 +13,3 @@ const UserHeader = () => {
     )
 }
 
-export default UserHeader

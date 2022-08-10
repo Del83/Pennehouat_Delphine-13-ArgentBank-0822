@@ -1,4 +1,5 @@
 import "../styles/Features.css"
+import propTypes from 'prop-types';
 
 /**
  * Display features item
@@ -7,7 +8,7 @@ import "../styles/Features.css"
  * @param {string} text 
  * @component
  */
-const FeatureItem = ( props ) => {
+ export default function FeatureItem ( props ) {
 
     return (
         <div className="feature-item">
@@ -22,4 +23,8 @@ const FeatureItem = ( props ) => {
     )
 }
 
-export default FeatureItem
+FeatureItem.propTypes = {
+    icon: propTypes.string,
+    title: propTypes.string,
+    text: propTypes.string,
+}

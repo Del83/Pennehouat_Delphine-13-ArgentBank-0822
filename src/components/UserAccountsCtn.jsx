@@ -1,20 +1,11 @@
 import UserAccount from "./UserAccount"
+import { checkingTitle, checkingAmount, checkingAmountDescription, savingsTitle, savingsAmount, savingsAmountDescription, creditcardTitle, creditcardAmount, creditcardAmountDescription,}  from "../Data/DataUserAccount"
 
-
-const checkingTitle = "Checking (x8349)"
-const checkingAmount = "2,082.79"
-const checkingAmountDescription = "Available"
-
-const savingsTitle = "Savings (x6712)"
-const savingsAmount = "10,928.42"
-const savingsAmountDescription = "Available"
-
-const creditcardTitle = "Credit Card (x8349)"
-const creditcardAmount = "184.30"
-const creditcardAmountDescription = "Current"
-
-const UserAccountsCtn = () => {
-
+/**
+ * Display user account container
+ * @component
+ */
+export default  function UserAccountsCtn () {
     return (
         <section className="user-accounts-ctn">
             <h2 className="sr-only">Accounts</h2>
@@ -36,9 +27,6 @@ const UserAccountsCtn = () => {
                 amount={creditcardAmount}
                 amountDescription={creditcardAmountDescription}
             />
-
         </section>
     )
 } 
-
-export default UserAccountsCtn

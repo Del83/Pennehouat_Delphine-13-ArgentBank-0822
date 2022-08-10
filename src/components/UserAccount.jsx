@@ -1,12 +1,13 @@
+import propTypes from 'prop-types';
 
 /**
  * Display user account
  * @param {string} title 
- * @param {number} amount  
+ * @param {string} amount  
  * @param {string} amountDescription 
  * @component
  */
-const UserAccount = ( props ) => {
+export default function UserAccount ( props ) {
 
     return (
         <section className="account">
@@ -22,4 +23,8 @@ const UserAccount = ( props ) => {
     )
 } 
 
-export default UserAccount
+UserAccount.propTypes = {
+    title: propTypes.string,
+    amount: propTypes.string,
+    amountDescription: propTypes.string,
+}

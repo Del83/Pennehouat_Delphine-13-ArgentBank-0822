@@ -1,7 +1,10 @@
 import "../styles/SignIn.css"
 
-const SignInModal = () => {
-
+/**
+ * Display sign in modal
+ * @component
+ */
+export default function SignInModal () {
     return (
             <section className="sign-in-content">
                 <i className="fa fa-user-circle sign-in-icon"></i>
@@ -36,8 +39,6 @@ const SignInModal = () => {
             </section>
     );
 };
-
-export default SignInModal
 
 
 // PLACEHOLDER DUE TO STATIC SITE

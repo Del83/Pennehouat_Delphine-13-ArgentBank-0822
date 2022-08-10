@@ -2,7 +2,11 @@ import "../../styles/Layout.css"
 import logo from "../../assets/img/argentBankLogo.png"
 import { NavLink } from "react-router-dom";
 
-const Header = () => {
+/**
+ * Header layout
+ * @component
+ */
+ export default function Header () {
 
     return (
         <section className="header">
@@ -26,4 +30,3 @@ const Header = () => {
     )
 }
 
-export default Header;

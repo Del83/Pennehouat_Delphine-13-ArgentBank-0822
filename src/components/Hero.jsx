@@ -1,7 +1,10 @@
 import "../styles/Hero.css"
 
-const Hero = () => {
-
+/**
+ * Display hero
+ * @component
+ */
+export default function Hero () {
     return (
         <div className="hero">
         <section className="hero-content">
@@ -15,4 +18,3 @@ const Hero = () => {
     )
 }
 
-export default Hero;
