@@ -7,7 +7,7 @@ import propTypes from 'prop-types';
  * @param {string} amountDescription 
  * @component
  */
-export default function UserAccount ( props ) {
+export default function ProfileAccount ( props ) {
 
     return (
         <section className="account">
@@ -23,7 +23,7 @@ export default function UserAccount ( props ) {
     )
 } 
 
-UserAccount.propTypes = {
+ProfileAccount.propTypes = {
     title: propTypes.string,
     amount: propTypes.string,
     amountDescription: propTypes.string,

@@ -1,9 +1,6 @@
 import "../styles/Features.css";
 import FeatureItem from "./FeatureItem";
-import iconChat from "../assets/img/icon-chat.png";
-import iconMoney from "../assets/img/icon-money.png";
-import iconSecurity from "../assets/img/icon-security.png";
-import {titleChat, titleMoney, titleSecurity, textChat, textMoney, textSecurity,}  from "../Data/DataFeatures"
+import features  from "../data/DataFeatures"
 
 /**
  * Display features
@@ -14,22 +11,22 @@ export default function Features () {
         <section className="features">
             <h2 className="sr-only">Features</h2>
             <FeatureItem
-            key={"chat"}
-            icon={iconChat}
-            title={titleChat}
-            text={textChat}
+                key={"chat"}
+                icon={features[0].icon}
+                title={features[0].title}
+                text={features[0].text}
             />
             <FeatureItem
-            key={"money"}
-            icon={iconMoney}
-            title={titleMoney}
-            text={textMoney}
+                key={"money"}
+                icon={features[1].icon}
+                title={features[1].title}
+                text={features[1].text}
             />
             <FeatureItem
-            key={"security"}
-            icon={iconSecurity}
-            title={titleSecurity}
-            text={textSecurity}
+                key={"security"}
+                icon={features[2].icon}
+                title={features[2].title}
+                text={features[2].text}
             />
       </section>
     )

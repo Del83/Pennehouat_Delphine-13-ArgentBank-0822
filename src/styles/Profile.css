@@ -3,6 +3,42 @@
     text-align: center; 
 }
     
+/*-------------------- PROFILE-HEADER --------------------*/ 
+.profile-header {
+    color: #fff;
+    margin-bottom: 2rem;
+}
+
+.edit-button {
+    border-color: #00bc77;
+    background-color: #00bc77;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+}
+   
+.edit-profile-name {
+    display: flex;
+    grid-gap: 20px;
+    justify-content: center;
+    color: #12002b;
+}
+
+.edit-profile-input{
+    background-color: white;
+    height: 30px;
+}
+
+
+.edit-profile-button {
+    height: 30px;
+    width: 100px;
+    background-color: #00bc77;
+    color: white;
+    font-weight: bold;
+}
+
+/*-------------------- PROFILE-ACCOUNT --------------------*/
 .account {
     display: flex;
     justify-content: space-between;
@@ -17,7 +53,19 @@
     text-align: left;
     margin-bottom: 2rem;
 }
-  
+
+.account-content-wrapper {
+    width: 100%;
+    flex: 1;
+}  
+
+.account-title {
+    margin: 0;
+    padding: 0;
+    font-size: 1rem;
+    font-weight: normal;
+}
+
 .account-amount {
     margin: 0;
     font-size: 2.5rem;
@@ -26,31 +74,6 @@
   
 .account-amount-description {
     margin: 0;
-}
-  
-.account-title {
-    margin: 0;
-    padding: 0;
-    font-size: 1rem;
-    font-weight: normal;
-}
-  
-.account-content-wrapper {
-    width: 100%;
-    flex: 1;
-}
-  
-.edit-button {
-    border-color: #00bc77;
-    background-color: #00bc77;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px;
-}
-  
-.user-header {
-    color: #fff;
-    margin-bottom: 2rem;
 }
   
 .transaction-button {
@@ -64,6 +87,8 @@
     background-color: #00bc77;
     color: #fff;
 }
+  
+/*-------------------- MEDIA QUERIES --------------------*/
   
 @media (min-width: 720px) {
     .account {
@@ -79,7 +104,4 @@
     }
 }  
 
-.padding-user {
-    padding-top: 1.34em;
-    padding-bottom: 1.34em;
-}
+

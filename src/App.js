@@ -1,19 +1,24 @@
-//import logo from "./logo.svg";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import SignIn from "./pages/SignIn";
-import User from "./pages/User";
+import Login from "./pages/Login";
+import Profile from "./pages/Profile";
 import "./styles/reset.css";
+
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/sign_in" element={<SignIn />} />
-        <Route path="/user" element={<User />} />
-      </Routes>
-    </BrowserRouter>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/profile" element={<Profile />} />
+        </Routes>
+      </BrowserRouter>
+    </Provider>
   );
 };
 

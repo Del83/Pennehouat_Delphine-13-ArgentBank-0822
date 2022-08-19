@@ -85,3 +85,13 @@ input {
     background-color: #12002b;
 
   }
+
+.profil-padding {
+    padding-top: 1.34em;
+    padding-bottom: 1.34em;
+}
+
+  .display-none {
+    display: none;
+}
+

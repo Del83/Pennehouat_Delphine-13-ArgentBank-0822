@@ -1,5 +1,5 @@
-import "../styles/Features.css"
 import propTypes from 'prop-types';
+import "../styles/Features.css"
 
 /**
  * Display features item
