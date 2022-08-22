@@ -1,11 +1,13 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Provider } from "react-redux";
+// Store
+import store from "./utils/store";
+// Pages
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Profile from "./pages/Profile";
+// CSS
 import "./styles/reset.css";
-
-import { Provider } from "react-redux";
-import store from "./utils/store";
 
 const App = () => {
   return (

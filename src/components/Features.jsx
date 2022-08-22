@@ -1,6 +1,6 @@
-import "../styles/Features.css";
 import FeatureItem from "./FeatureItem";
 import features  from "../data/DataFeatures"
+import "../styles/Features.css";
 
 /**
  * Display features

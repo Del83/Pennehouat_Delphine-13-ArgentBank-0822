@@ -2,13 +2,12 @@ import propTypes from 'prop-types';
 
 /**
  * Display user account
- * @param {string} title 
- * @param {string} amount  
- * @param {string} amountDescription 
+ * @param {string} title account title
+ * @param {string} amount account amount 
+ * @param {string} amountDescription account amount description
  * @component
  */
 export default function ProfileAccount ( props ) {
-
     return (
         <section className="account">
             <div className="account-content-wrapper">

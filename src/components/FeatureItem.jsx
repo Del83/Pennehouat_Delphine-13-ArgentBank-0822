@@ -3,9 +3,9 @@ import "../styles/Features.css"
 
 /**
  * Display features item
- * @param {string} icon 
- * @param {string} title 
- * @param {string} text 
+ * @param {string} icon features icon
+ * @param {string} title features title
+ * @param {string} text features text
  * @component
  */
  export default function FeatureItem ( props ) {

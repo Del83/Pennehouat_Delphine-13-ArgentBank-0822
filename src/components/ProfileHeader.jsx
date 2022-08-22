@@ -5,25 +5,21 @@ import { selectToken } from "../utils/selectors";
 import { fetchProfile } from '../features/getProfile';
 import { sendUpdateProfile } from '../features/sendProfile';
 import "../styles/Profile.css"
-// import { useDispatch, useSelector } from "react-redux";
-// import { selectToken } from "../utils/selectors";
-// import { fetchOrUpdateUser } from "../features/getUser";
 
 /**
  * Display profile header
- * @param {string} firstname 
- * @param {string} lastname  
+ * @param {string} firstname user's first name
+ * @param {string} lastname user's last name
  * @component
  */
 export default function ProfileHeader ({firstname, lastname}) {
     const [edit, setEdit] = useState(false);
-    const [editedFirstName, setEditedFirstName] = useState("");
-    const [editedLastName, setEditedLastName] = useState("");
+    const [editedFirstName, setEditedFirstName] = useState(firstname);
+    const [editedLastName, setEditedLastName] = useState(lastname);
 
     const newIdentify = { firstName : editedFirstName, lastName: editedLastName };
 
     const dataToken = useSelector(selectToken);
-    //const dataUser = useSelector(selectProfile);
     const dispatch = useDispatch();
     
     const handleSubmit = (e) => {
@@ -50,13 +46,17 @@ export default function ProfileHeader ({firstname, lastname}) {
                 <br/>
                 <form onSubmit={(e) => handleSubmit(e)}>
                     <div className="edit-profile-name">
-                        <input className="edit-profile-input" type="text" placeholder={firstname} value={editedFirstName} onChange={ (e) => setEditedFirstName(e.target.value)}/>
-                        <input className="edit-profile-input" type="text" placeholder={lastname} value={editedLastName} onChange={ (e) => setEditedLastName(e.target.value)}/> 
+                        <input className="edit-profile-input" type="text" placeholder={firstname} onChange={ (e) => setEditedFirstName(e.target.value)} value={editedFirstName} />
+                        <input className="edit-profile-input" type="text" placeholder={lastname} onChange={ (e) => setEditedLastName(e.target.value)} value={editedLastName} /> 
                     </div>
                     <br/>   
                     <div className="edit-profile-name">
                         <button className="edit-profile-button" onClick={(e) => handleSubmit(e)}>Save</button>
-                        <button className="edit-profile-button" onClick={() => setEdit(false)}>Cancel</button>
+                        <button className="edit-profile-button" onClick={() => { 
+                            setEdit(false)
+                            setEditedFirstName(firstname)
+                            setEditedLastName(lastname)}}
+                             >Cancel</button>
                     </div>  
                 </form>
                      

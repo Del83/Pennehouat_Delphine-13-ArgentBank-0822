@@ -1,7 +1,8 @@
-import { selectToken } from "../utils/selectors";
 import { createSlice, createAction } from "@reduxjs/toolkit";
-import API_URL from "../data/DataUrl";
+// DATA et ACTIONS
 import statusManagement from "../utils/actions";
+import { selectToken } from "../utils/selectors";
+import API_URL from "../data/DataUrl";
 
 const initialState = {
   status: "void",
@@ -15,6 +16,11 @@ const { actions, reducer } = createSlice({
   reducers: statusManagement,
 });
 
+/**
+ * Custom hook that get user token
+ * @param {object} identifiers
+ * @returns {dataToken} user token
+ */
 export function fetchOrUpdateToken(identifiers) {
   return async (dispatch, getState) => {
     const status = selectToken(getState()).status;

@@ -1,14 +1,19 @@
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+// PAGE COMPONENTS
 import Header from "../components/Layout/Header";
 import Footer from "../components/Layout/Footer";
 import ProfileHeader from "../components/ProfileHeader";
 import ProfileAccountsCtn from "../components/ProfileAccountsCtn";
+// DATA et ACTIONS
 import { selectProfile, selectToken } from "../utils/selectors";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { fetchProfile, resetProfile } from "../features/getProfile";
-
+import { fetchProfile } from "../features/getProfile";
+// CSS
 import "../styles/Profile.css";
 
+/**Render the profil page
+ * @return {JSX}
+ */
 const Profile = () => {
   const dataToken = useSelector(selectToken);
   const dataUser = useSelector(selectProfile);

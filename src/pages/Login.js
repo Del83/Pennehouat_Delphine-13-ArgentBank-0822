@@ -1,24 +1,24 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchOrUpdateToken, resetLogin } from "../features/getToken";
-
+// PAGE COMPONENTS
 import Header from "../components/Layout/Header";
 import Footer from "../components/Layout/Footer";
-import "../styles/Login.css";
+// DATA et ACTIONS
 import { selectToken } from "../utils/selectors";
-import { useNavigate } from "react-router-dom";
+import { fetchOrUpdateToken, resetLogin } from "../features/getToken";
+// CSS
+import "../styles/Login.css";
 
+/**Render the login page
+ * @return {JSX}
+ */
 const Login = () => {
   const [userEmail, setUserEmail] = useState("");
   const [userPassword, setUserPassword] = useState("");
-  // const [userToken, setUserToken] = useState(() => {
-  //   const save = localStorage.setItem("token");
-  //   const valeurInitiale = JSON.parse(save);
-  //   return valeurInitiale || "";
-  // });
-
   const identifiers = { email: userEmail, password: userPassword };
   const dataToken = useSelector(selectToken);
+
   const dispatch = useDispatch();
   let navigate = useNavigate();
 
@@ -30,7 +30,6 @@ const Login = () => {
   useEffect(() => {
     if (dataToken.data?.status === 200) {
       navigate("/profile");
-      //setUserToken(dataToken);
     }
     if (dataToken.data?.status === 400) {
       alert(dataToken.data.message);

@@ -1,7 +1,8 @@
-import { selectProfile } from "../utils/selectors";
 import { createSlice } from "@reduxjs/toolkit";
-import API_URL from "../data/DataUrl";
+// DATA et ACTIONS
 import statusManagement from "../utils/actions";
+import { selectProfile } from "../utils/selectors";
+import API_URL from "../data/DataUrl";
 
 const initialState = {
   status: "void",
@@ -15,6 +16,11 @@ export const { actions, reducer } = createSlice({
   reducers: statusManagement,
 });
 
+/**
+ * Custom hook that get user profile data
+ * @param {string} dataToken user token
+ * @returns {UserData} user profile data
+ */
 export function fetchProfile(dataToken) {
   return async (dispatch, getState) => {
     const status = selectProfile(getState()).status;
@@ -32,9 +38,7 @@ export function fetchProfile(dataToken) {
         },
       });
       const data = await response.json();
-
       dispatch(actions.resoldved(data));
-      console.log(data);
     } catch (error) {
       dispatch(actions.rejected(error));
     }
@@ -42,5 +46,3 @@ export function fetchProfile(dataToken) {
 }
 
 export const profileReducer = reducer;
-
-//export const resetLogin = createAction("profile/reset");
