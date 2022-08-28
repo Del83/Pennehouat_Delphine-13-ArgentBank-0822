@@ -22,7 +22,6 @@ export default function Header ({firstname}) {
             </div>
         )  
     }
-
     const profileHeader = () => {
         return (
             <div>
@@ -33,7 +32,6 @@ export default function Header ({firstname}) {
             </div>
         )
     }
-
     return (
         <section className="header">
             <nav className="main-nav">
