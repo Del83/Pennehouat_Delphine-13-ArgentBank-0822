@@ -281,7 +281,7 @@ definitions:
   TransactionDetails:
     type: object
     properties:
-      transaction type:
+      transaction_type:
         type: string
       category:
         type: string
@@ -299,7 +299,7 @@ definitions:
         properties:
           id:
             type: string
-          transaction type:
+          transaction_type:
             type: string
           category:
             type: string

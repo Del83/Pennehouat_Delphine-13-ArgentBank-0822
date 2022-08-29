@@ -1,5 +1,5 @@
 import propTypes from 'prop-types';
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectToken } from "../utils/selectors";
 import { fetchProfile } from '../features/getProfile';
@@ -26,11 +26,8 @@ export default function ProfileHeader ({firstname, lastname}) {
         e.preventDefault();
         dispatch(sendUpdateProfile(dataToken, newIdentify));
         setEdit(false)
-      };
-
-      useEffect(() => {
         dispatch(fetchProfile(dataToken));
-      }, [dispatch, dataToken, newIdentify]);
+      };
 
       return (
        <div>
